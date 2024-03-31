@@ -4,10 +4,8 @@ namespace IntroductionToOOP
 {
     internal class Program
     {
-        private int _count = 0;
         static void Main(string[] args)
         {
-            new Program()._count = 0;
             BankAccount account = new BankAccount("Jerry", 1000);
             Console.WriteLine($"Account {account.Number} was created for {account.Owner} with {account.Balance} initial balance.");
             account.MakeWithdrawal(500, DateTime.Now, "Rent Payment");
@@ -41,52 +39,5 @@ namespace IntroductionToOOP
         }
 
 
-
-
-        interface IStudent
-        {
-            void DoLearn(string syllabus);
-            void Enroll();
-            void IsPresent();
-
-        }
-
-        class LocalStudent : IStudent
-        {
-            public void DoLearn(string syllabus)
-            {
-                Console.WriteLine("Learned local syllabus");
-                throw new NotImplementedException();
-            }
-
-            public void Enroll()
-            {
-                throw new NotImplementedException();
-            }
-
-            public void IsPresent()
-            {
-                throw new NotImplementedException();
-            }
-        }
-        class ForeignStudent : IStudent
-
-        {
-            public void DoLearn(string syllabus)
-            {
-                Console.WriteLine("Learned foreign syllabus");
-                throw new NotImplementedException();
-            }
-
-            public void Enroll()
-            {
-                throw new NotImplementedException();
-            }
-
-            public void IsPresent()
-            {
-                throw new NotImplementedException();
-            }
-        }
     }
 }
